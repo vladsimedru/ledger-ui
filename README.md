@@ -43,4 +43,4 @@ forwarding.
   next to the field it points at (`/entries/1/amount` → the second entry's amount).
 - **Tracing.** Every request sends a fresh `X-Request-Id`; errors show it so a failure can be
   found in the API logs.
-- No dependencies beyond React; routing is a small hash router (`src/route.ts`).
+- No dependencies beyond React; routing is a small hash router (`src/lib/route.ts`).

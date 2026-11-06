@@ -1,10 +1,10 @@
 import { useCallback, useMemo, useState, type FormEvent } from 'react';
-import { AccountView } from './components/AccountView';
-import { OpenAccount } from './components/OpenAccount';
-import { Overview } from './components/Overview';
-import { RecordTransaction } from './components/RecordTransaction';
-import { TransactionView } from './components/TransactionView';
-import { api } from './api';
+import { AccountView } from './pages/AccountView';
+import { OpenAccount } from './pages/OpenAccount';
+import { Overview } from './pages/Overview';
+import { RecordTransaction } from './pages/RecordTransaction';
+import { TransactionView } from './pages/TransactionView';
+import { api } from './api/client';
 import {
   LedgerContext,
   SETTLEMENT_ACCOUNTS,
@@ -13,9 +13,9 @@ import {
   saveRemembered,
   type KnownAccount,
   type Ledger,
-} from './ledger';
-import { go, href, useRoute, type Route } from './route';
-import type { Account } from './types';
+} from './lib/ledger';
+import { go, href, useRoute, type Route } from './lib/route';
+import type { Account } from './api/types';
 
 export function App() {
   const route = useRoute();
